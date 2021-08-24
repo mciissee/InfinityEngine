@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{33C839D6-E6CF-415B-9281-C3972C99481C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InfinityEngine</RootNamespace>
+    <AssemblyName>InfinityEngine</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Debug\InfinityEngine.XML</DocumentationFile>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Release\InfinityEngine.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\DesignPatterns\IObservable.cs" />
+    <Compile Include="src\DesignPatterns\Observable.cs" />
+    <Compile Include="src\DesignPatterns\Observer.cs" />
+    <Compile Include="src\DesignPatterns\Singleton.cs" />
+    <Compile Include="src\Extensions\ArrayExtensions.cs" />
+    <Compile Include="src\Extensions\AudioSourceExtensions.cs" />
+    <Compile Include="src\Extensions\CameraExtensions.cs" />
+    <Compile Include="src\Extensions\CanvasGroupExtensions.cs" />
+    <Compile Include="src\Extensions\Extensions.cs" />
+    <Compile Include="src\Extensions\ImageExtensions.cs" />
+    <Compile Include="src\Extensions\LightExtensions.cs" />
+    <Compile Include="src\Extensions\LineRendererExtensions.cs" />
+    <Compile Include="src\Extensions\ListExtensions.cs" />
+    <Compile Include="src\Extensions\MaterialExtensions.cs" />
+    <Compile Include="src\Extensions\RectTransformExtensions.cs" />
+    <Compile Include="src\Extensions\RigidBodyExtensions.cs" />
+    <Compile Include="src\Extensions\SpriteRendererExtensions.cs" />
+    <Compile Include="src\Extensions\TextExtensions.cs" />
+    <Compile Include="src\Extensions\TrailRendererExtensions.cs" />
+    <Compile Include="src\Extensions\TransformExtensions.cs" />
+    <Compile Include="src\IAccessor.cs" />
+    <Compile Include="src\IMutator.cs" />
+    <Compile Include="src\Interpolations\DoubleColor.cs" />
+    <Compile Include="src\Interpolations\EaseType.cs" />
+    <Compile Include="src\Interpolations\Easing.cs" />
+    <Compile Include="src\Interpolations\Interpolable.cs" />
+    <Compile Include="src\Interpolations\Interpolation.cs" />
+    <Compile Include="src\Interpolations\InterpolationOptions.cs" />
+    <Compile Include="src\Interpolations\Sequence.cs" />
+    <Compile Include="src\KeyValue.cs" />
+    <Compile Include="src\Infinity.cs" />
+    <Compile Include="src\Serialization\Serializer.cs" />
+    <Compile Include="src\SoundManager.cs" />
+    <Compile Include="src\Interpolations\InterpolationManager.cs" />
+    <Compile Include="src\Interpolations\LoopTypes.cs" />
+    <Compile Include="src\Interpolations\RotationModes.cs" />
+    <Compile Include="src\Utils\TypeOF.cs" />
+    <Compile Include="src\Utils\ClassGenerator.cs" />
+    <Compile Include="src\Utils\Debugger.cs" />
+    <Compile Include="src\Utils\ReflectionUtils.cs" />
+    <Compile Include="src\Utils\CodeGenerationUtils.cs" />
+    <Compile Include="src\Utils\FA.cs" />
+    <Compile Include="src\Utils\FAOption.cs" />
+    <Compile Include="src\Utils\GoogleTranslate.cs" />
+    <Compile Include="src\Utils\SimpleJSON.cs" />
+    <Compile Include="src\Utils\ObjectCopier.cs" />
+    <Compile Include="src\Utils\AutoStretchSprite.cs" />
+    <Compile Include="src\Attributes\AccordionAttribute.cs" />
+    <Compile Include="src\Attributes\CustomDrawerAttribute.cs" />
+    <Compile Include="src\Attributes\DrawOrderAttribute.cs" />
+    <Compile Include="src\Attributes\DecoratorField.cs" />
+    <Compile Include="src\Attributes\DisplayAsAttribute.cs" />
+    <Compile Include="src\Attributes\DontDrawInspectorIfAttribute.cs" />
+    <Compile Include="src\Attributes\InfinityHeaderAttribute.cs" />
+    <Compile Include="src\Attributes\InspectorButtonLocations.cs" />
+    <Compile Include="src\Attributes\InspectorButtonAttribute.cs" />
+    <Compile Include="src\Attributes\MemberTypes.cs" />
+    <Compile Include="src\Attributes\MessageTypes.cs" />
+    <Compile Include="src\Attributes\MessageAttribute.cs" />
+    <Compile Include="src\Attributes\MessageIfEmptyAttribute.cs" />
+    <Compile Include="src\Attributes\MessageIfEqualsAttribute.cs" />
+    <Compile Include="src\Attributes\MinMaxRangeAttribute.cs" />
+    <Compile Include="src\Attributes\OverrideInspectorAttribute.cs" />
+    <Compile Include="src\Attributes\PopupValueTypes.cs" />
+    <Compile Include="src\Attributes\PopupAttribute.cs" />
+    <Compile Include="src\Attributes\ProgressBarAttribute.cs" />
+    <Compile Include="src\Attributes\ReorderableAttribute.cs" />
+    <Compile Include="src\Attributes\TabAttribute.cs" />
+    <Compile Include="src\Attributes\VisibleIfAttribute.cs" />
+    <Compile Include="src\ResourceManagement\PoolManager.cs" />
+    <Compile Include="src\Extensions\PoolManagerExtensions.cs" />
+    <Compile Include="src\BackButtonManager.cs" />
+    <Compile Include="src\Toast.cs" />
+    <Compile Include="src\Timer.cs" />
+    <Compile Include="src\SoundManagerUI.cs" />
+    <Compile Include="src\SceneLoader.cs" />
+    <Compile Include="src\MinMax.cs" />
+    <Compile Include="src\InputManager.cs" />
+    <Compile Include="src\Helper.cs" />
+    <Compile Include="src\EditorCoroutine.cs" />
+    <Compile Include="src\EditorWaitForSeconds.cs" />
+    <Compile Include="src\AutoRotate.cs" />
+    <Compile Include="src\Scene.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\Utils\" />
+    <Folder Include="src\Attributes\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <Policies>
+          <DotNetNamingPolicy DirectoryNamespaceAssociation="None" ResourceNamePolicy="FileFormatDefault" />
+        </Policies>
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+</Project>
